@@ -34,7 +34,6 @@ class UnRealEstateService(
             phone = phone,
             password = password,
             birthDate = birthDate,
-            avatar = avatar,
         )
 
         agent = agentRepository.save(agent)

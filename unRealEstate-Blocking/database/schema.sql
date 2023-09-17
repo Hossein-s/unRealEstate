@@ -1,6 +1,6 @@
 USE `unreal_estate`;
 
-CREATE TABLE `agent`
+CREATE TABLE `agents`
 (
     `id`         int(11)      NOT NULL AUTO_INCREMENT,
     `firstname`  varchar(255) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE `agent`
     PRIMARY KEY (`id`)
 );
 
-CREATE TABLE `property`
+CREATE TABLE `properties`
 (
     `id`          int(11)      NOT NULL AUTO_INCREMENT,
     `owner_name`  varchar(255) NOT NULL,
@@ -24,7 +24,7 @@ CREATE TABLE `property`
     `address`     varchar(500) NOT NULL,
     `price`       int(11)      NOT NULL,
     `description` text         NOT NULL,
-    `agent_id`    int(11)      NOT NULL REFERENCES agent (id),
+    `agent_id`    int(11)      NOT NULL REFERENCES `agents` (`id`),
     `created_at`  timestamp    NOT NULL,
     `updated_at`  timestamp    NOT NULL,
     PRIMARY KEY (`id`)

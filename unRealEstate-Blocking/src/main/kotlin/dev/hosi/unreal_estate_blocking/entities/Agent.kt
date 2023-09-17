@@ -20,12 +20,10 @@ class Agent(
     val password: String,
 
     @Temporal(TemporalType.TIMESTAMP)
-    val birthDate: Instant,
-
-    val avatar: String,
+    val birthDate: Instant
 ) {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
 
     @UpdateTimestamp

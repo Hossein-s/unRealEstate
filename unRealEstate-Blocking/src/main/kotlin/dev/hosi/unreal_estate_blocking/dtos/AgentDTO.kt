@@ -11,7 +11,6 @@ data class AgentDTO(
     val email: String,
     val phone: String,
     val birthDate: Instant,
-    val avatar: String,
 ) {
     companion object {
         fun fromAgent(agent: Agent): AgentDTO {
@@ -23,7 +22,6 @@ data class AgentDTO(
                 email = agent.email,
                 phone = agent.phone,
                 birthDate = agent.birthDate,
-                avatar = agent.avatar,
             )
         }
     }

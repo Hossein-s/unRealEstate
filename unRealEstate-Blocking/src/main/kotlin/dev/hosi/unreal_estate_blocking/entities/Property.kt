@@ -23,7 +23,7 @@ class Property(
     val agent: Agent,
 ) {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
 
     @UpdateTimestamp
