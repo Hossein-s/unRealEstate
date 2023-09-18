@@ -4,17 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    depends_on:
-      - database
     ports:
       - "8080:8080"
-
-  database:
-    image: mariadb:11.1
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: unreal_estate
-    volumes:
-      - ./database:/docker-entrypoint-initdb.d
+    extra_hosts:
+      - database-server:XXX.XXX.XXX.XXX

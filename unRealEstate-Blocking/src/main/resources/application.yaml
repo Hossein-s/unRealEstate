@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mariadb://database:3306/unreal_estate
+    url: jdbc:mariadb://database-server:3306/unreal_estate
     username: root
     password: root
 springdoc:
