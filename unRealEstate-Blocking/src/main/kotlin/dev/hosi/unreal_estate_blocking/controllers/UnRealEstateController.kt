@@ -19,7 +19,6 @@ class UnRealEstateController(private val unRealEstateService: UnRealEstateServic
             phone = input.phone,
             password = input.password,
             birthDate = input.birthDate,
-            avatar = input.avatar,
         )
     }
 

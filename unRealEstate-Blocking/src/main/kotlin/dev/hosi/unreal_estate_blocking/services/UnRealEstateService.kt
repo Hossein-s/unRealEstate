@@ -23,8 +23,7 @@ class UnRealEstateService(
         email: String,
         phone: String,
         password: String,
-        birthDate: Instant,
-        avatar: String
+        birthDate: Instant
     ): AgentDTO {
         var agent = Agent(
             firstname = firstname,

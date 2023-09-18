@@ -25,10 +25,4 @@ class Property(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
-
-    @UpdateTimestamp
-    val updatedAt: Instant = Instant.now()
-
-    @CreationTimestamp
-    val createdAt: Instant = Instant.now()
 }

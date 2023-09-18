@@ -10,5 +10,4 @@ data class CreateAgentInput(
     val phone: String,
     val password: String,
     val birthDate: Instant,
-    val avatar: String,
 )
