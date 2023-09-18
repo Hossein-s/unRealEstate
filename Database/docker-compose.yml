@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  database:
+    image: mariadb:11.1
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: unreal_estate
+    volumes:
+      - ./:/docker-entrypoint-initdb.d
+
