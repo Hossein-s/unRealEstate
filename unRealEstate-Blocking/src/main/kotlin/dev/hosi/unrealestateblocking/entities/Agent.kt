@@ -11,8 +11,6 @@ class Agent(
     val email: String,
     val phone: String,
     val password: String,
-
-    @Temporal(TemporalType.TIMESTAMP)
     val birthDate: LocalDate
 ) {
     @Id
