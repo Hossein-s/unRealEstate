@@ -24,7 +24,7 @@ class UnRealEstateController(private val unRealEstateService: UnRealEstateServic
     }
 
     @PostMapping("/properties")
-    fun createProperty(input: CreatePropertyInput): Mono<PropertyDTO> {
+    fun createProperty(@RequestBody input: CreatePropertyInput): Mono<PropertyDTO> {
         return unRealEstateService.addProperty(
             agentId = input.agentId,
             ownerName = input.ownerName,
