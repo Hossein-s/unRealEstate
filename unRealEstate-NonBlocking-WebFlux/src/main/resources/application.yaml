@@ -1,0 +1,8 @@
+spring:
+  r2dbc:
+    url: r2dbc:mariadb://database-server:3306/unreal_estate
+    username: root
+    password: root
+springdoc:
+  api-docs:
+    enabled: true
