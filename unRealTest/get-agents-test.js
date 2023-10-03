@@ -1,11 +1,12 @@
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 import { check } from "k6";
-import { Options } from "k6/options";
 import http from "k6/http";
 
-export let options: Options = {
-  vus: 5000,
-  duration: "60s",
-};
+export function handleSummary(data) {
+  return {
+    "summary.html": htmlReport(data),
+  };
+}
 
 export default () => {
   const url = "http://localhost:8080/agents";
