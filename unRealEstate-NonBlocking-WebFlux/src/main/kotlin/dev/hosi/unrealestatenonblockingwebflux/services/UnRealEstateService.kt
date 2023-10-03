@@ -10,7 +10,7 @@ import dev.hosi.unrealestatenonblockingwebflux.repositories.PropertyRepository
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
-import java.time.LocalDateTime
+import java.time.LocalDate
 
 @Service
 class UnRealEstateService(
@@ -24,7 +24,7 @@ class UnRealEstateService(
         email: String,
         phone: String,
         password: String,
-        birthDate: LocalDateTime,
+        birthDate: LocalDate,
     ): Mono<AgentDTO> {
         val agent = Agent(
             firstname = firstname,

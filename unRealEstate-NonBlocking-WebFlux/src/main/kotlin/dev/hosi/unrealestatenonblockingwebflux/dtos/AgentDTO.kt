@@ -1,7 +1,7 @@
 package dev.hosi.unrealestatenonblockingwebflux.dtos
 
 import dev.hosi.unrealestatenonblockingwebflux.entities.Agent
-import java.time.LocalDateTime
+import java.time.LocalDate
 
 data class AgentDTO(
     val id: Long,
@@ -10,7 +10,7 @@ data class AgentDTO(
     val nickname: String,
     val email: String,
     val phone: String,
-    val birthDate: LocalDateTime,
+    val birthDate: LocalDate,
 ) {
     companion object {
         fun fromAgent(agent: Agent): AgentDTO {

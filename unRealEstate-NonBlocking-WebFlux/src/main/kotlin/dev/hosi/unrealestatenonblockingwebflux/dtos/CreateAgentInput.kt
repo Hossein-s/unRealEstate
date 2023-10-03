@@ -1,6 +1,6 @@
 package dev.hosi.unrealestatenonblockingwebflux.dtos
 
-import java.time.LocalDateTime
+import java.time.LocalDate
 
 data class CreateAgentInput(
     val firstname: String,
@@ -9,5 +9,5 @@ data class CreateAgentInput(
     val email: String,
     val phone: String,
     val password: String,
-    val birthDate: LocalDateTime,
+    val birthDate: LocalDate,
 )
