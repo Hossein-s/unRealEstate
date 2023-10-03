@@ -1,15 +1,15 @@
-package dev.hosi.unreal_estate_blocking.services
+package dev.hosi.unrealestateblocking.services
 
-import dev.hosi.unreal_estate_blocking.dtos.AgentDTO
-import dev.hosi.unreal_estate_blocking.dtos.PageDTO
-import dev.hosi.unreal_estate_blocking.dtos.PropertyDTO
-import dev.hosi.unreal_estate_blocking.entities.Agent
-import dev.hosi.unreal_estate_blocking.entities.Property
-import dev.hosi.unreal_estate_blocking.repositories.AgentRepository
-import dev.hosi.unreal_estate_blocking.repositories.PropertyRepository
+import dev.hosi.unrealestateblocking.dtos.AgentDTO
+import dev.hosi.unrealestateblocking.dtos.PageDTO
+import dev.hosi.unrealestateblocking.dtos.PropertyDTO
+import dev.hosi.unrealestateblocking.entities.Agent
+import dev.hosi.unrealestateblocking.entities.Property
+import dev.hosi.unrealestateblocking.repositories.AgentRepository
+import dev.hosi.unrealestateblocking.repositories.PropertyRepository
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
-import java.time.Instant
+import java.time.LocalDate
 
 @Service
 class UnRealEstateService(
@@ -23,7 +23,7 @@ class UnRealEstateService(
         email: String,
         phone: String,
         password: String,
-        birthDate: Instant
+        birthDate: LocalDate
     ): AgentDTO {
         var agent = Agent(
             firstname = firstname,

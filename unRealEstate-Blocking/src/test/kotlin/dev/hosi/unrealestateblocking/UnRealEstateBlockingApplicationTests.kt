@@ -1,4 +1,4 @@
-package dev.hosi.unreal_estate_blocking
+package dev.hosi.unrealestateblocking
 
 import org.springframework.boot.test.context.SpringBootTest
 

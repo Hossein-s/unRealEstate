@@ -1,6 +1,6 @@
-package dev.hosi.unreal_estate_blocking.repositories
+package dev.hosi.unrealestateblocking.repositories
 
-import dev.hosi.unreal_estate_blocking.entities.Property
+import dev.hosi.unrealestateblocking.entities.Property
 import org.springframework.data.jpa.repository.JpaRepository
 
 interface PropertyRepository : JpaRepository<Property, Long>

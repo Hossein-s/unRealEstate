@@ -1,7 +1,7 @@
-package dev.hosi.unreal_estate_blocking.dtos
+package dev.hosi.unrealestateblocking.dtos
 
-import dev.hosi.unreal_estate_blocking.entities.Agent
-import java.time.Instant
+import dev.hosi.unrealestateblocking.entities.Agent
+import java.time.LocalDate
 
 data class AgentDTO(
     val id: Long,
@@ -10,7 +10,7 @@ data class AgentDTO(
     val nickname: String,
     val email: String,
     val phone: String,
-    val birthDate: Instant,
+    val birthDate: LocalDate,
 ) {
     companion object {
         fun fromAgent(agent: Agent): AgentDTO {

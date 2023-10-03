@@ -1,4 +1,4 @@
-package dev.hosi.unreal_estate_blocking.dtos
+package dev.hosi.unrealestateblocking.dtos
 
 data class CreatePropertyInput(
     val agentId: Long,

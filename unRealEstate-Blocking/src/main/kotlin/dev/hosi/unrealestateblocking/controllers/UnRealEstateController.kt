@@ -1,7 +1,7 @@
-package dev.hosi.unreal_estate_blocking.controllers
+package dev.hosi.unrealestateblocking.controllers
 
-import dev.hosi.unreal_estate_blocking.dtos.*
-import dev.hosi.unreal_estate_blocking.services.UnRealEstateService
+import dev.hosi.unrealestateblocking.dtos.*
+import dev.hosi.unrealestateblocking.services.UnRealEstateService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody

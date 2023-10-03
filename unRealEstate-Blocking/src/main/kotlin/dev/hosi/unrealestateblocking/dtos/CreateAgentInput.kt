@@ -1,6 +1,6 @@
-package dev.hosi.unreal_estate_blocking.dtos
+package dev.hosi.unrealestateblocking.dtos
 
-import java.time.Instant
+import java.time.LocalDate
 
 data class CreateAgentInput(
     val firstname: String,
@@ -9,5 +9,5 @@ data class CreateAgentInput(
     val email: String,
     val phone: String,
     val password: String,
-    val birthDate: Instant,
+    val birthDate: LocalDate,
 )

@@ -1,6 +1,6 @@
-package dev.hosi.unreal_estate_blocking.dtos
+package dev.hosi.unrealestateblocking.dtos
 
-import dev.hosi.unreal_estate_blocking.entities.Property
+import dev.hosi.unrealestateblocking.entities.Property
 
 data class PropertyDTO(
     val id: Long,
