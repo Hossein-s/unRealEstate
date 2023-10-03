@@ -7,6 +7,7 @@ import dev.hosi.unrealestatenonblockingwebflux.entities.Agent
 import dev.hosi.unrealestatenonblockingwebflux.entities.Property
 import dev.hosi.unrealestatenonblockingwebflux.repositories.AgentRepository
 import dev.hosi.unrealestatenonblockingwebflux.repositories.PropertyRepository
+import kotlinx.coroutines.flow.flowOf
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
@@ -59,7 +60,7 @@ class UnRealEstateService(
                         address = address,
                         price = price,
                         description = description,
-                        agent = it,
+                        agentId = it.id!!,
                     )
                 )
             }

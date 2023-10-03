@@ -1,6 +1,9 @@
 package dev.hosi.unrealestateblocking.entities
 
-import jakarta.persistence.*
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.GenerationType
+import jakarta.persistence.Id
 
 @Entity(name = "properties")
 class Property(
@@ -10,9 +13,7 @@ class Property(
     val address: String,
     val price: Long,
     val description: String,
-
-    @ManyToOne
-    val agent: Agent,
+    val agentId: Long,
 ) {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

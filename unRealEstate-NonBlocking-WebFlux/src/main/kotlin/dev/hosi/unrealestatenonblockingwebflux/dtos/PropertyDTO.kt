@@ -10,7 +10,7 @@ data class PropertyDTO(
     val address: String,
     val price: Long,
     val description: String,
-    val agent: AgentDTO,
+    val agentId: Long,
 ) {
     companion object {
         fun fromProperty(property: Property): PropertyDTO {
@@ -22,7 +22,7 @@ data class PropertyDTO(
                 address = property.address,
                 price = property.price,
                 description = property.description,
-                agent = AgentDTO.fromAgent(property.agent)
+                agentId = property.agentId
             )
         }
     }

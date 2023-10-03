@@ -11,7 +11,7 @@ class Property(
     val address: String,
     val price: Long,
     val description: String,
-    val agent: Agent,
+    val agentId: Long,
 ) {
     @Id
     var id: Long? = null

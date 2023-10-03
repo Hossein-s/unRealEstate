@@ -58,7 +58,7 @@ class UnRealEstateService(
             address = address,
             price = price,
             description = description,
-            agent = agent,
+            agentId = agent.id!!,
         )
 
         property = propertyRepository.save(property)
