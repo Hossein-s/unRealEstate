@@ -5,7 +5,7 @@ const GlobEntries = require("webpack-glob-entries");
 
 module.exports = {
   mode: "production",
-  entry: GlobEntries("./src/*Test*.ts"),
+  entry: GlobEntries("./src/*test*.ts"),
   output: {
     path: path.join(__dirname, "dist"),
     libraryTarget: "commonjs",
