@@ -9,7 +9,7 @@ CREATE TABLE `agents`
     `email`      varchar(255) NOT NULL,
     `phone`      varchar(255) NOT NULL,
     `password`   varchar(255) NOT NULL,
-    `birth_date` timestamp    NOT NULL,
+    `birth_date` date         NOT NULL,
     PRIMARY KEY (`id`)
 );
 
