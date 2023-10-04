@@ -1,6 +1,6 @@
-package dev.hosi.unrealestatenonblockingwebflux.dtos
+package dev.hosi.unrealestatenonblockingcoroutines.dtos
 
-import dev.hosi.unrealestatenonblockingwebflux.entities.Agent
+import dev.hosi.unrealestatenonblockingcoroutines.entities.Agent
 import java.time.LocalDate
 
 data class AgentDTO(

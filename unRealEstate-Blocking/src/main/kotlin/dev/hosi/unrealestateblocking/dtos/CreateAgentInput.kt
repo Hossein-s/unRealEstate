@@ -1,4 +1,4 @@
-package dev.hosi.unrealestatenonblockingwebflux.dtos
+package dev.hosi.unrealestateblocking.dtos
 
 import java.time.LocalDate
 

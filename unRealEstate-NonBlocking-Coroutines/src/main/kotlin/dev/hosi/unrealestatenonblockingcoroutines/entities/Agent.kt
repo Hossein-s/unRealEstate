@@ -1,4 +1,4 @@
-package dev.hosi.unrealestatenonblockingwebflux.entities
+package dev.hosi.unrealestatenonblockingcoroutines.entities
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.relational.core.mapping.Table

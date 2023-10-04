@@ -1,6 +1,6 @@
-package dev.hosi.unrealestatenonblockingwebflux.dtos
+package dev.hosi.unrealestatenonblockingcoroutines.dtos
 
-import dev.hosi.unrealestatenonblockingwebflux.entities.Property
+import dev.hosi.unrealestatenonblockingcoroutines.entities.Property
 
 data class PropertyDTO(
     val id: Long,

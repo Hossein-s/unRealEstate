@@ -1,10 +1,9 @@
-package dev.hosi.unrealestatenonblockingwebflux.entities
+package dev.hosi.unrealestateblocking.entities
 
-import org.springframework.data.annotation.Id
-import org.springframework.data.relational.core.mapping.Table
+import jakarta.persistence.*
 import java.time.LocalDate
 
-@Table(name = "agents")
+@Entity(name = "agents")
 class Agent(
     val firstname: String,
     val lastname: String,
@@ -15,5 +14,6 @@ class Agent(
     val birthDate: LocalDate
 ) {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long? = null
 }

@@ -1,6 +1,6 @@
-package dev.hosi.unrealestatenonblockingwebflux.dtos
+package dev.hosi.unrealestateblocking.dtos
 
-import dev.hosi.unrealestatenonblockingwebflux.entities.Property
+import dev.hosi.unrealestateblocking.entities.Property
 
 data class PropertyDTO(
     val id: Long,
@@ -22,7 +22,7 @@ data class PropertyDTO(
                 address = property.address,
                 price = property.price,
                 description = property.description,
-                agentId = property.agentId
+                agentId = property.agentId,
             )
         }
     }

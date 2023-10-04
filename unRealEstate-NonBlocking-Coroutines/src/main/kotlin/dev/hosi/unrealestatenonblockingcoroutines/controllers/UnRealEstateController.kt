@@ -1,17 +1,16 @@
-package dev.hosi.unrealestatenonblockingwebflux.controllers
+package dev.hosi.unrealestatenonblockingcoroutines.controllers
 
-import dev.hosi.unrealestatenonblockingwebflux.dtos.*
-import dev.hosi.unrealestatenonblockingwebflux.services.UnRealEstateService
+import dev.hosi.unrealestatenonblockingcoroutines.dtos.*
+import dev.hosi.unrealestatenonblockingcoroutines.services.UnRealEstateService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
-import reactor.core.publisher.Mono
 
 @RestController
 class UnRealEstateController(private val unRealEstateService: UnRealEstateService) {
     @PostMapping("/agents")
-    fun createAgent(@RequestBody input: CreateAgentInput): Mono<AgentDTO> {
+    suspend fun createAgent(@RequestBody input: CreateAgentInput): AgentDTO {
         return unRealEstateService.addAgent(
             firstname = input.firstname,
             lastname = input.lastname,
@@ -24,7 +23,7 @@ class UnRealEstateController(private val unRealEstateService: UnRealEstateServic
     }
 
     @PostMapping("/properties")
-    fun createProperty(@RequestBody input: CreatePropertyInput): Mono<PropertyDTO> {
+    suspend fun createProperty(@RequestBody input: CreatePropertyInput): PropertyDTO {
         return unRealEstateService.addProperty(
             agentId = input.agentId,
             ownerName = input.ownerName,
@@ -37,12 +36,12 @@ class UnRealEstateController(private val unRealEstateService: UnRealEstateServic
     }
 
     @GetMapping("/agents")
-    fun getAgents(): Mono<PageDTO<AgentDTO>> {
+    suspend fun getAgents(): PageDTO<AgentDTO> {
         return unRealEstateService.getAgents()
     }
 
     @GetMapping("/properties")
-    fun getProperties(): Mono<PageDTO<PropertyDTO>> {
+    suspend fun getProperties(): PageDTO<PropertyDTO> {
         return unRealEstateService.getProperties()
     }
 }
