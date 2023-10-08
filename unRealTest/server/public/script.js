@@ -47,10 +47,10 @@ function addChartSection(container, scenario, parameter, data) {
 
   container.appendChild(section);
 
-  createChart(id, data);
+  createChart(id, data, parameter);
 }
 
-function createChart(rootId, data) {
+function createChart(rootId, data, parameter) {
   /**
    * ---------------------------------------
    * This demo was created using amCharts 5.
@@ -110,20 +110,32 @@ function createChart(rootId, data) {
 
   const xAxis = chart.xAxes.push(am5xy.CategoryAxis.new(root, {
     categoryField: "vus",
-    renderer: xRenderer
+    renderer: xRenderer,
+    numberFormatter: am5.NumberFormatter.new(root, {
+      numberFormat: "ss#.#a VsssUs"
+    })
   }));
 
   xRenderer.grid.template.setAll({
     location: 1
   });
+  xRenderer.labels.template.adapters.add("text", (text) => `${text} VUs`);
 
   xAxis.data.setAll(data);
 
+  var yLabel = am5.Label.new(root, {
+    rotation: -90,
+    text: parameter === "metrics.iterations.rate" ? "request/s" : "milliseconds",
+    y: am5.p50,
+    centerX: am5.p50
+  });
   const yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
+    min: 0,
     renderer: am5xy.AxisRendererY.new(root, {
       strokeOpacity: 0.1
     })
   }));
+  yAxis.children.unshift(yLabel);
 
 
   // Add series
@@ -139,7 +151,7 @@ function createChart(rootId, data) {
     }));
 
     series.columns.template.setAll({
-      tooltipText: "{name}, {categoryX}:{valueY}",
+      tooltipText: "{name}, {categoryX} VUs: {valueY}",
       width: am5.percent(80),
       tooltipY: 0,
       strokeOpacity: 0
