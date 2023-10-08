@@ -1,0 +1,23 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.chart-section {
+    margin: 60px 0 0;
+    padding-bottom: 60px;
+
+    border-bottom: 1px solid cadetblue;
+}
+
+.chart {
+    width: 860px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.9rem;
+    font-weight: 500;
+}
